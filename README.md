@@ -1,65 +1,88 @@
 # webchat
+
+<img src="https://s3.qiufengh.com/webchat/webchat-logo-160.png" />
+
 [![Build Status](https://www.travis-ci.org/hua1995116/webchat.svg?branch=master)](https://www.travis-ci.org/hua1995116/webchat)
-## 项目历程
-[vue+websocket+express+mongodb实战项目（实时聊天）（一）](http://blog.csdn.net/blueblueskyhua/article/details/70807847)
 
-[vue+websocket+express+mongodb实战项目（实时聊天）（二）](http://blog.csdn.net/blueblueskyhua/article/details/73250992)
+[中文版](./README.md) [English](./zh_en.md)
 
-[vue-chat项目之重构与体验优化](http://blog.csdn.net/blueblueskyhua/article/details/78159672)
-## 前端监控数据
+## 功能
 
-http://www.qiufengh.com:8080/
+- [x] 注册登录功能
+- [x] 聊天功能
+- [x] 查看历史记录
+- [x] 多个聊天室
+- [x] 与机器人对接
+- [x] 图片发送
+- [x] 发送链接
+- [x] 发送表情
+- [x] 图片预览
+- [x] 消息未读
+- [x] 断线重连
+- [x] 好友资料查看
+- [x] 添加好友
+- [x] 单聊
+- [x] 搜索好友
+- [x] 热门好友推荐
 
-## releases
-[1.1.0版本](https://github.com/hua1995116/webchat/tree/v1.0.0)
 
-- 完成聊天室
-- 机器人聊天
-- 登录，注册功能。
-- 整站界面部署
+## 启动项目
 
-[1.2.0版本](https://github.com/hua1995116/webchat/tree/v1.2.0)
+Dev环境: MongoDB、Node 8.5.0+、Npm 5.3.0+
 
-- 增加上传图片
-- 首屏优化以及改造
+Prod环境: Redis、MongoDB、Node 8.5.0+、Npm 5.3.0+
 
-[2.0.0版本](https://github.com/hua1995116/webchat/tree/v2.0.0)
+启动客户端
+```
+$webchat cd client
 
-- 增加alert,confirm,toast,loading,svg-modal,localStroage等组件。
-- 增加历史记录功能
-- 增加多个聊天室功能
-- 接入前端监控
-- 优化切页的效果
-- 增加日志记录
+$client npm install -----安装依赖
 
-[2.2.0版本](https://github.com/hua1995116/webchat/tree/v2.2.0)
-
-- 加入一键部署cdn
-- 将node功能模块分离
-
+$client npm run serve -----运行
 
 ```
-npm install -----安装依赖
-npm run dev -----运行
-npm run build -----打包
-node prod.server.js -----打包后运行
-//记得替换
-view/Loan.vue下的io.connect('http://qiufengh.com/')
-http://qiufengh.com:9090改成自己的项目地址。
+启动服务端
 ```
+$client cd ..
+
+$webchat npm install
+
+$webchat npm run dev
+```
+
+## 打包
+
+打包客户端
+```
+cd client
+
+npm run build
+```
+
+服务端运行
+```
+cd ..
+
+npm run prod
+```
+
 在线观看
-[http://www.qiufengh.com/](http://www.qiufengh.com/)
 
-### 实现功能
-- [x] 聊天功能 -- 完成
-- [x] 多个聊天室 -- 完成
-- [x] 与机器人对接 -- 完成
-- [x] 图片发送 -- 完成
-- [x] 注册功能 -- 完成
-- [x] 登录功能 -- 完成
-- [x] 历史记录 -- 完成
+[https://www.qiufengh.com/](https://www.qiufengh.com/)
 
-### 技术栈
+<img src="http://s3.qiufengh.com/images/1536588077.png" width="400" />
+
+## 技术交流
+
+
+<img src="https://s3.qiufengh.com/webchat/webchat-group.jpeg?imageView2/2/w/360" width="300" />
+
+如果群过期加微信，拉你进群。
+
+<img src="https://s3.qiufengh.com/webchat/webcaht-my.jpeg" width="300" />
+
+
+## 技术栈
 
  - 前端 vue，vue-router ,vuex
  - 后端 nodejs，express
@@ -67,15 +90,57 @@ http://qiufengh.com:9090改成自己的项目地址。
  - 通讯 websocket
  - 脚手架工具 vue-cli
 
+## 效果
 
-最后上几张图。
+<img src="http://s3.qiufengh.com/screenshot/1.png"/>
 
-![这里写图片描述](http://img.blog.csdn.net/20171005172806229?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmx1ZWJsdWVza3lodWE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+<img src="http://s3.qiufengh.com/screenshot/2.png"/>
 
+<img src="http://s3.qiufengh.com/screenshot/3.png"/>
 
-![这里写图片描述](http://img.blog.csdn.net/20171005164309491?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmx1ZWJsdWVza3lodWE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+<img src="http://s3.qiufengh.com/screenshot/4.png"/>
 
-![这里写图片描述](http://img.blog.csdn.net/20171005164044558?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmx1ZWJsdWVza3lodWE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+## 版本更新
 
-![这里写图片描述](http://img.blog.csdn.net/20171005172553272?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYmx1ZWJsdWVza3lodWE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+**v3新增功能**
 
+1. 网络异常判断、重连提示
+2. 多端信息同步
+3. 好友资料查看
+4. 添加好友
+5. 单聊
+6. 搜索好友
+7. 热门好友推荐
+8. 性别、手机号修改
+9. 搜索加好友
+
+## 版本预览
+
+**v2 稳定版本**
+
+https://github.com/hua1995116/webchat/tree/v2.2.0
+
+**其他版本**
+
+<a href="./RELEASE.md">RELEASE</a>
+
+## 项目wiki
+[vue+websocket+express+mongodb实战项目（实时聊天）（一）](http://blog.csdn.net/blueblueskyhua/article/details/70807847)
+
+[vue+websocket+express+mongodb实战项目（实时聊天）（二）](http://blog.csdn.net/blueblueskyhua/article/details/73250992)
+
+[vue-chat项目之重构与体验优化](http://blog.csdn.net/blueblueskyhua/article/details/78159672)
+
+[消息未读之点不完的小红点（Node+Websocket）](https://juejin.im/post/5bf227676fb9a049ac78bfcf)
+
+## API
+
+<a href="./API.md">API</a>
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
+
+MIT License
+
+Copyright (c) 2018 蓝色的秋风

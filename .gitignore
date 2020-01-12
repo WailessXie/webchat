@@ -50,3 +50,8 @@ node_modules
 dist
 .idea
 application.log
+static/files/*
+cache_temp/*
+static_temp/*
+.vscode
+notice-config.js
